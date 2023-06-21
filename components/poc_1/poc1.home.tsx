@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
 
   const fetchDonors = async () => {
-    const response = await fetch("/api/donor");
+    const response = await fetch("/api/donor", { next: { revalidate: 10 } });
     const donorsData = await response.json();
     setDonors(donorsData);
   };
