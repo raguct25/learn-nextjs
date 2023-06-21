@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
 
   const fetchDonors = async () => {
-    const response = await fetch("/api/donor");
+    const response = await fetch("/api/donor", { cache: "no-store" });
     const donorsData = await response.json();
     setDonors(donorsData);
   };
