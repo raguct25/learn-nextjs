@@ -1,8 +1,6 @@
 "use client";
-
 import Provider from "@components/poc_1/providers/Provider";
 import Header from "@components/poc_1/header";
-import { ReactNode } from "react";
 
 const Poc1Layout = ({ children }: { children: React.ReactNode }) => {
   return (
