@@ -16,7 +16,9 @@ const Home = () => {
   }, []);
 
   const fetchDonors = async () => {
-    const response = await fetch("/api/donor", { cache: "no-store" });
+    // const response = await fetch("/api/donor", { cache: "no-store" });
+    const response = await fetch("/api/donor");
+
     const donorsData = await response.json();
     setDonors(donorsData);
   };
@@ -174,3 +176,7 @@ const Home = () => {
 };
 
 export default Home;
+
+// "mongodb": "^5.6.0",
+// "mongoose": "^7.3.0",
+// "next": "13.4.4",
